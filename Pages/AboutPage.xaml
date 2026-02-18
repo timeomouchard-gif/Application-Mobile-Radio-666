@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="projet_stage.Pages.AboutPage"
+    Title="À propos"
+    BackgroundColor="#111">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="📻 À propos de Radio 666"
+                   FontSize="24"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" />
+            <Label Text="Radio 666 est une radio indépendante basée à Caen (France), diffusant rock, metal, punk, électro et plus encore."
+                   FontSize="16"
+                   TextColor="#ccc"
+                   HorizontalTextAlignment="Center"
+                   WidthRequest="300"
+                   HorizontalOptions="Center" />
+            <HorizontalStackLayout Spacing="40"
+                       HorizontalOptions="Center"
+                       Margin="0,10,0,0">
+                <Border WidthRequest="70"
+                        HeightRequest="70"
+                        StrokeThickness="0"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                    <ImageButton x:Name="facebookButton"
+                                 Source="image1.png"
+                                 Clicked="Cnm"
+                                 BackgroundColor="Transparent"
+                                 Aspect="AspectFill" />
+                </Border>
+                <Border WidthRequest="70"
+                        HeightRequest="70"
+                        StrokeThickness="0"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                    <ImageButton x:Name="instagramButton"
+                                 Source="image2.jpg"
+                                 Clicked="Ferarock"
+                                 BackgroundColor="Transparent"
+                                 Aspect="AspectFill" />
+                </Border>
+            </HorizontalStackLayout>
+            <Button Text="🌐 Visiter le site web"
+                    Clicked="OpenWebsite"
+                    BackgroundColor="#333"
+                    TextColor="White"
+                    HorizontalOptions="Center" />
+            <Button Text="⬅ Retour"
+                    Clicked="OnBackClicked"
+                    BackgroundColor="#333"
+                    TextColor="White"
+                    HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

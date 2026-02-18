@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projet_stage.Pages.Artistes"
+             Title="Artistes">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="20">
+            <VerticalStackLayout Spacing="5">
+                <Label Text="Les Artistes normands"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+                <Label Text="666 met en avant les groupes de sa région"
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#aaa" />
+                <BoxView HeightRequest="2" BackgroundColor="#E60012" Margin="60,10"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Border BackgroundColor="#1c1c1c"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 20"
+                        Padding="15">
+                    <VerticalStackLayout Spacing="10">
+                        <Border StrokeShape="RoundRectangle 15"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill">
+                            <Image Source="les_normands.jpg"
+                                   Aspect="AspectFill"
+                                   HorizontalOptions="Fill"
+                                   VerticalOptions="Fill"
+                                   HeightRequest="200">
+                                <Image.Clip>
+                                    <RoundRectangleGeometry Rect="0,0,9999,9999" CornerRadius="15"/>
+                                </Image.Clip>
+                            </Image>
+                        </Border>
+                        <Label Text="🎧 Scène locale"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="White" />
+                        <Label Text="Autour de la scène caennaise et régionale."
+                               FontSize="14"
+                               TextColor="#ccc" />
+                        <Button Text="▶ Découvrir"
+                                Clicked="Image_Click3"
+                                BackgroundColor="#E60012"
+                                TextColor="White"
+                                CornerRadius="12"/>
+                    </VerticalStackLayout>
+                </Border>
+                <Border BackgroundColor="#1c1c1c"
+        StrokeThickness="0"
+        StrokeShape="RoundRectangle 20"
+        Padding="15">
+                    <VerticalStackLayout Spacing="10">
+                        <Border StrokeShape="RoundRectangle 15"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                            <Image Source="lamusicale.png"
+
+                   Aspect="AspectFill"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   HeightRequest="200">
+                                <Image.Clip>
+                                    <RoundRectangleGeometry Rect="0,0,9999,9999" CornerRadius="15"/>
+                                </Image.Clip>
+                            </Image>
+                        </Border>
+                        <Label Text="🎧 Locaux de l'étape/L'amusicale"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White" />
+                        <Label Text="Les radios associatives musicales en Normandie."
+               FontSize="14"
+               TextColor="#ccc" />
+                        <Button Text="▶ Découvrir"
+                Clicked="Image_Click4"
+                BackgroundColor="#E60012"
+                TextColor="White"
+                CornerRadius="12"/>
+                    </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

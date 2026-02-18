@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="projet_stage.Pages.MainPage"
+             Title="Radio 666">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#111111" Offset="0.0" />
+            <GradientStop Color="#4B0082" Offset="0.3" />
+            <GradientStop Color="#111111" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+        <Grid>
+            <toolkit:MediaElement x:Name="RadioPlayer"
+                                  Source="https://stream2.radio666.net/remote320.mp3"
+                                  ShouldShowPlaybackControls="False"
+                                  Volume="0.5"
+                                  IsVisible="False" />
+            <Grid x:Name="MenuOverlay"
+                  IsVisible="True"
+                  Opacity="1"
+                  ZIndex="5">
+                <StackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             WidthRequest="300"
+                             Padding="20"
+                             Spacing="15">
+                    <Grid WidthRequest="260" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="🔈" TextColor="White" VerticalOptions="Center" Margin="5"/>
+                        <Slider Grid.Column="1" x:Name="VolumeSlider" Minimum="0" Maximum="1" Value="0.5" Margin="5"
+                                ValueChanged="VolumeSlider_ValueChanged"/>
+                        <Label Grid.Column="2" Text="🔊" TextColor="White" VerticalOptions="Center" Margin="5"/>
+                    </Grid>
+                    <Button x:Name="PlayButton" Text="▶ Écouter Radio 666" Clicked="PlayRadio" />
+                    <Button Text="🎵 Quel est ce titre?" Clicked="OpenQuelestcetitre" />
+                    <Button Text="🎤 Replay et Podcasts" Clicked="MenuItem_Podcast" />
+                    <Button Text="🎸 Les Artistes normands" Clicked="Artistes" />
+                    <Button Text="👜 Boutique" Clicked="Shop" />
+                    <Button Text="🌐 Site Web" Clicked="OpenWebsite" />
+                    <Button Text="ℹ️ À propos" Clicked="MenuItem_About" />
+                    <Button Text="🏠 Accueil" Clicked="HomeButton_Click" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+    

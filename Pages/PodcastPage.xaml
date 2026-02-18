@@ -1,0 +1,97 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projet_stage.Pages.PodcastPage"
+             BackgroundColor="#111"
+             Title="Podcasts">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="20">
+            <VerticalStackLayout Spacing="5">
+                <Label Text="🎙️Replay et Podcasts Radio 666"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+                <Label Text="Écoutez les dernières émissions et archives"
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#aaa" />
+                <BoxView HeightRequest="2" BackgroundColor="#E60012" Margin="60,10"/>
+            </VerticalStackLayout>
+            <Border BackgroundColor="#1c1c1c"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Border StrokeShape="RoundRectangle 15"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill">
+                        <Image Source="replay_podcasts.jpg"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Fill"
+                               VerticalOptions="Fill"
+                               HeightRequest="200">
+                            <Image.Clip>
+                                <RoundRectangleGeometry Rect="0,0,9999,9999" CornerRadius="15"/>
+                            </Image.Clip>
+                        </Image>
+                    </Border>
+                    <Label Text="🎧 À propos des replays de la semaine"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White" />
+                    <Label Text="Découverte des replay de la semaine actuellement sur Radio 666."
+                           FontSize="14"
+                           TextColor="#ccc" />
+                    <Button Text="▶ Ouvrir"
+                            Clicked="Image_Click1"
+                            BackgroundColor="#E60012"
+                            TextColor="White"
+                            CornerRadius="12"/>
+                </VerticalStackLayout>
+            </Border>
+            <Border BackgroundColor="White"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Border StrokeShape="RoundRectangle 15"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill">
+                        <Image Source="podcast2.jpg"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Fill"
+                               VerticalOptions="Fill"
+                               HeightRequest="200">
+                            <Image.Clip>
+                                <RoundRectangleGeometry Rect="0,0,9999,9999" CornerRadius="15"/>
+                            </Image.Clip>
+                        </Image>
+                    </Border>
+                    <Label Text="🎧 Mixcloud Radio 666"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="Black" />
+                    <Label Text="Retrouvez les émissions enregistrées et archives sur notre Mixcloud officiel."
+                           FontSize="14"
+                           TextColor="#444" />
+                    <Button Text="▶ Ouvrir Mixcloud"
+                            Clicked="Image_Click2"
+                            BackgroundColor="#E60012"
+                            TextColor="White"
+                            CornerRadius="12"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            <Button Text="🏠 Retour à l'accueil"
+                    Clicked="HomeButton_Click"
+                    BackgroundColor="#333"
+                    TextColor="White"
+                    FontSize="16"
+                    CornerRadius="10"
+                    HeightRequest="45"
+                    Margin="0,20"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

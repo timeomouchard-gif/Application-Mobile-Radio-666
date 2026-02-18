@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="projet_stage.Pages.Shop"
+             Title="Boutique">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#4B0082" Offset="0.1" />
+            <GradientStop Color="#800080" Offset="0.4" />
+            <GradientStop Color="#000000" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+        <Grid>
+            <Grid x:Name="ShopOverlay"
+                  IsVisible="True"
+                  Opacity="1"
+                  ZIndex="5">
+                <StackLayout VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             WidthRequest="300"
+                             Padding="20"
+                             Spacing="15">
+                    <Label Text="🛍️ Boutique Radio 666"
+                           FontSize="24"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Découvrez nos vêtements, goodies et objets publicitaires."
+                           FontSize="16"
+                           TextColor="#ccc"
+                           HorizontalTextAlignment="Center"
+                           WidthRequest="300" />
+                    <Button Text="👕 Vêtements"
+                            Clicked="OpenVetements"
+                            BackgroundColor="#333"
+                            TextColor="White" />
+                    <Button Text="🧥 Sweat à capuche"
+                            Clicked="OpenGoodies"
+                            BackgroundColor="#333"
+                            TextColor="White" />
+                    <Button Text="📢 Objets Publicitaires"
+                            Clicked="OpenObjetsPublicitaires"
+                            BackgroundColor="#333"
+                            TextColor="White" />
+                    <Button Text="🏠 Retour au site"
+                            Clicked="OpenSite"
+                            BackgroundColor="#333"
+                            TextColor="White" />
+                    <Button Text="⬅ Retour"
+                            Clicked="OnBackClicked"
+                            BackgroundColor="#333"
+                            TextColor="White" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
